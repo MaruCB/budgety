@@ -1,1 +1,11 @@
-"hello there"
+<div>
+  <% @transactions.all.each do |transaction| %>
+    <%= transaction.category.name %>
+    <%= transaction.amount %>
+  <% end %>
+</div>
+<br>
+
+<div id="add_button", class="flexbox">
+  <%= link_to "Add new", new_transaction_path %>
+</div>
