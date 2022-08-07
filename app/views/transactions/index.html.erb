@@ -1,16 +1,19 @@
-<div>
-  <% @transactions.all.each do |transaction| %>
-    <%= transaction.category.name %>
-    <%= transaction.amount %>
-  <% end %>
-</div>
-<br>
+<%# <div class="container"> %>
+  <div>
+    <% @transactions.all.each do |transaction| %>
+      <%= transaction.category.name %>
+      <%= transaction.amount %>
+    <% end %>
+  </div>
+<%# </div> %>
+
 
 <div class="footer">
   <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-4" id="add_button"><%= link_to new_transaction_path do %>
-        <%= <i class="fa-solid fa-plus"></i> %>
+        <i class="fa-solid fa-plus"></i>
+        <%# <%= icon('fa-solid', 'fa--plus') %>
       <% end %>
     </div>
     <div class="col-sm-4"></div>
