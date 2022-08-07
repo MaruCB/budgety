@@ -270,7 +270,11 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
+<<<<<<< HEAD
   sass-rails
+=======
+  sassc-rails
+>>>>>>> b461587a253919d3bc1b262d7ab89a0525929bf1
   selenium-webdriver
   simple_form!
   sprockets-rails
