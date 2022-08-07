@@ -1,5 +1,14 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 
+<<<<<<< HEAD
+@import 'components/index';
+@import 'layouts/index';
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+=======
 @import 'components/index.scss';
 @import 'layouts/index.scss';
+>>>>>>> a3d129266d682149bad7ab733805c55c5772af37

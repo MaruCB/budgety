@@ -1,12 +1,12 @@
-<%# <div class="container"> %>
-  <div>
-    <% @transactions.all.each do |transaction| %>
-      <%= transaction.category.name %>
-      <%= transaction.amount %>
-    <% end %>
-  </div>
-<%# </div> %>
 
+<div>
+  <% @transactions.all.each do |transaction| %>
+    <%= transaction.category.name %>
+    <%= transaction.amount %>
+    <i class="fa fa-graduation-cap"></i>
+  <% end %>
+</div>
+<br>
 
 <div class="footer">
   <div class="row">

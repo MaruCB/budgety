@@ -1,6 +1,14 @@
 <nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+  <div class="container-fluid justify-con">
+    <div class="d-flex">
+      <%= link_to root_path do %>
+        <%= image_tag "user", class: "navbar-avatar-round" %>
+      <% end %>
+      <div class="d-flex-row ml-3">
+        <p>Welcome!</p>
+        <p><%= current_user.first_name %></p>
+      </div>
+    </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,8 +16,6 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
         <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled">Disabled</a>
       </div>
     </div>
   </div>
