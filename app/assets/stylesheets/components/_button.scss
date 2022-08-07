@@ -1,12 +1,15 @@
 .footer {
   position: absolute;
-}
+  background-color: white;
+  border-radius: 25px, 25px, 0, 0;
 
-#add_button {
-  border-radius: 50%;
-  text-decoration: none;
+  #add_button {
+    border-radius: 50%;
+    text-decoration: none;
+    border-color: black;
 
-  &:hover {
-    color: black;
+    &:hover {
+
+    }
   }
 }
