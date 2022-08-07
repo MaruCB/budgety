@@ -1,0 +1,12 @@
+.flebox {
+  position: sticky;
+}
+
+#add_button {
+  border-radius: 50%;
+  text-decoration: none;
+
+  &:hover {
+    color: black;
+  }
+}
