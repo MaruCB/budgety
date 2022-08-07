@@ -12,9 +12,13 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new(transaction_params)
     @transaction.user = current_user
     @transaction.category = Category.find(transaction_params[:category_id])
-    @transaction.save
-
-    # redirect_to transaction_path(@transaction)
+    if @transaction.save
+      respond_to do |format|
+        format.html { redirect_to root_path, notice: "Transaction was successfully created." }
+      end
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   # def edit
