@@ -9,7 +9,7 @@
 Transaction.destroy_all
 User.destroy_all
 Category.destroy_all
-user = User.create(email: 'bob@mail.com', password: '123456')
+user = User.create(email: 'bob@mail.com', password: '123456', first_name: "Bob", last_name: "Builder")
 category = Category.create(name: 'Food')
 Transaction.create(
   notes: 'going out',

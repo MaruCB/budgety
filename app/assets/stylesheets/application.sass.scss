@@ -1,10 +1,11 @@
 // // Entry point for your Sass build
-@import 'components/index.sass.scss';
-@import 'layouts/index.sass.scss';
+@import 'components/index';
+@import 'layouts/index';
 
 
 body {
   font-family: 'DM Sans', sans-serif;
+  background-color: black;
 }
 
 // .flebox = {
