@@ -6,6 +6,13 @@
 </div>
 <br>
 
-<div id="add_button", class="flexbox">
-  <%= link_to "Add new", new_transaction_path %>
+<div class="footer">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4" id="add_button"><%= link_to new_transaction_path do %>
+        <%= <i class="fa-solid fa-plus"></i> %>
+      <% end %>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
 </div>
