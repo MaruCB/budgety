@@ -114,6 +114,8 @@ GEM
     erubi (1.11.0)
     execjs (2.8.1)
     ffi (1.15.5)
+    font-awesome-rails (4.7.0.8)
+      railties (>= 3.2, < 8.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -265,16 +267,14 @@ DEPENDENCIES
   cssbundling-rails
   debug
   devise
+  font-awesome-rails
   jbuilder
   jsbundling-rails
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
-<<<<<<< HEAD
   sass-rails
-=======
   sassc-rails
->>>>>>> b461587a253919d3bc1b262d7ab89a0525929bf1
   selenium-webdriver
   simple_form!
   sprockets-rails

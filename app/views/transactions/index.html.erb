@@ -2,6 +2,7 @@
   <% @transactions.all.each do |transaction| %>
     <%= transaction.category.name %>
     <%= transaction.amount %>
+    <i class="fa fa-graduation-cap"></i>
   <% end %>
 </div>
 <br>
@@ -9,8 +10,9 @@
 <div class="footer">
   <div class="row">
     <div class="col-sm-4"></div>
-    <div class="col-sm-4" id="add_button"><%= link_to new_transaction_path do %>
-        <%= <i class="fa-solid fa-plus"></i> %>
+    <div class="col-sm-4" id="add_button">
+      <%= link_to new_transaction_path do %>
+        <i class="fa-solid"></i>
       <% end %>
     </div>
     <div class="col-sm-4"></div>
