@@ -1,20 +1,22 @@
-<div>
-  <% @transactions.all.each do |transaction| %>
-    <%= transaction.category.name %>
-    <%= transaction.amount %>
-    <i class="fa fa-graduation-cap"></i>
-  <% end %>
-</div>
-<br>
+<div class="container">
+  <%= render 'transactions/balance_card' %>
+  <div>
+    <% @transactions.all.each do |transaction| %>
+      <%= transaction.category.name %>
+      <%= transaction.amount %>
+      <i class="fa fa-graduation-cap"></i>
+    <% end %>
+  </div>
+  <br>
 
-<div class="footer">
-  <div class="row">
-    <div class="col-sm-4"></div>
-    <div id="button" class="col-sm-4"> +
-    <%# <%= link_to new_transaction_path do %>
-        <%# <i class="fa-solid fa-plus"></i> %>
-      <%# <% end %>
+  <div class="footer">
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4" id="button""><%= link_to new_transaction_path do %>
+          <i class="fa-solid fa-plus"></i>
+        <% end %>
+      </div>
+      <div class="col-sm-4"></div>
     </div>
-    <div class="col-sm-4"></div>
   </div>
 </div>
