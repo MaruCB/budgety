@@ -1,6 +1,7 @@
 <div class="container">
   <%= render 'transactions/balance_card' %>
   <br>
+<<<<<<< HEAD
   <div class="d-flex justify-content-between">
     <p>Transactions</p>
     <p class="fw-light text-black-50">View all</p>
@@ -10,6 +11,17 @@
       <% @transactions.all.each do |transaction| %>
         <%= render "transactions/transaction_card",  transaction: transaction %>
       <% end %>
+=======
+
+  <div class="footer">
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4" id="button""><%= link_to new_transaction_path do %>
+          <i class="fa-solid fa-plus"></i>
+        <% end %>
+      </div>
+      <div class="col-sm-4"></div>
+>>>>>>> ef70d1643aeabcec75e42922eb03db1f5feab42b
     </div>
   </div>
   <br>
