@@ -1,23 +1,17 @@
 <div class="container">
   <%= render 'transactions/balance_card' %>
-  <div>
-    <% @transactions.all.each do |transaction| %>
-      <%= transaction.category.name %>
-      <%= transaction.amount %>
-      <i class="fa fa-graduation-cap"></i>
-    <% end %>
-  </div>
   <br>
-
-  <div class="footer">
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4" id="add_button">
-      <div class="col-sm-4" id="add_button"><%= link_to new_transaction_path do %>
-          <i class="fa-solid fa-plus"></i>
-        <% end %>
-      </div>
-      <div class="col-sm-4"></div>
+  <div class="d-flex justify-content-between">
+    <p>Transactions</p>
+    <p class="fw-light text-black-50">View all</p>
+  </div>
+  <div>
+    <div class="transaction_cards">
+      <% @transactions.all.each do |transaction| %>
+        <%= render "transactions/transaction_card",  transaction: transaction %>
+      <% end %>
     </div>
   </div>
+  <br>
+  <br>
 </div>

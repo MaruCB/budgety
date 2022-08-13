@@ -1,0 +1,19 @@
+<div class="transaction_card">
+  <div class="d-inline-flex align-items-center">
+    <div class="transaction_card_icon">
+      <i class="fa-solid fa-circle me-3"></i>
+    </div>
+    <div class="transaction_card_name">
+      <%= transaction.category.name %></div>
+    </div>
+  <div>
+    £<%= transaction.amount %>
+    <div class="text-black-50 transaction_card_date">
+      <% if transaction.date == Date.today %>
+        Today
+      <% else %>
+        <%= transaction.date.strftime("%d/%m") %>
+      <% end %>
+    </div>
+  </div>
+</div>

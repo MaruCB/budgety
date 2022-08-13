@@ -1,13 +1,15 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 
+// Components
 @import 'components/index';
+@import 'components/_transaction_card';
+
+// Layouts
 @import 'layouts/index';
 
 body {
   font-family: 'DM Sans', sans-serif;
 }
 
-@import 'components/index.scss';
-@import 'layouts/index.scss';
 
