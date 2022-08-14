@@ -29,4 +29,10 @@
 .stats_icon {
   width: 45px;
   height: 45px;
+  transition: 0.2s;
+  
+  &:hover {
+    filter: contrast(1.5);
+    transform: scale(1.1);
+  }
 }
