@@ -21,8 +21,7 @@
   }
 
   &:hover {
-    width: 62px;
-    height: 62px;
+    transform: scale(1.1);
     filter: contrast(1.5);
   }
 }
