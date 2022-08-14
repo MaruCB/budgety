@@ -3,6 +3,8 @@ $gray: #F3F3F3;
 html {
   min-height:100%;
   position:relative;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -10,3 +12,4 @@ body {
   background-color: $gray;
   height: 100vh;
 }
+
