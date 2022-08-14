@@ -1,7 +1,9 @@
 <div class="footer">
   <div class="row w-100 m-0">
     <div class="col-4 ps-5">
-      <%= image_tag "up", class: "stats_icon" %>
+      <%= link_to root_path do %>
+        <%= image_tag "up", class: "stats_icon" %>
+      <% end %>
     </div>
     <div class="col-4">
       <%= link_to new_transaction_path do %>
