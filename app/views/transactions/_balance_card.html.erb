@@ -1,7 +1,7 @@
 <div class="card rounded border-0 text-center gradient-background text-white">
   <div class="card-body">
     <p class="card-title font-size-small fw-bold">Total Balance</p>
-    <h4 class="p-2">£<%= current_user.income - current_user.expenses %></h4>
+    <h4 class="p-2">£<%= (current_user.income - current_user.expenses).round(2) %></h4>
     <div class="d-inline-flex w-100 justify-content-around">
       <div>
         <p class="m-0 fw-light font-size-small">Income</p>
