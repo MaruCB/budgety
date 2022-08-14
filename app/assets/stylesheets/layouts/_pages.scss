@@ -1,6 +1,12 @@
 $gray: #F3F3F3;
 
+html {
+  min-height:100%;
+  position:relative;
+}
+
 body {
   font-family: 'DM Sans', sans-serif;
   background-color: $gray;
+  height: 100vh;
 }

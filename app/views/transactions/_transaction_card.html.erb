@@ -1,7 +1,7 @@
 <div class="transaction_card">
   <div class="d-inline-flex align-items-center">
-    <div class="transaction_card_icon">
-      <i class="fa-solid fa-circle me-3"></i>
+    <div class="me-3">
+      <%= image_tag "#{transaction.category.icon_name}", class: "transaction_card_icon" %>
     </div>
     <div class="transaction_card_name">
       <%= transaction.category.name %></div>
