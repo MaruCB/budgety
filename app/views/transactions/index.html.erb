@@ -7,7 +7,7 @@
   </div>
   <div>
     <div class="transaction_cards">
-      <% @transactions.all.each do |transaction| %>
+      <% @transactions.all.ordered.each do |transaction| %>
         <%= render "transactions/transaction_card",  transaction: transaction %>
       <% end %>
     </div>
