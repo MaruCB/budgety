@@ -1,7 +1,7 @@
 <div class="footer">
   <div class="row w-100 m-0">
     <div class="col-4 ps-5">
-      <%= link_to root_path do %>
+      <%= link_to request.original_url do %>
         <%= image_tag "up", class: "stats_icon" %>
       <% end %>
     </div>

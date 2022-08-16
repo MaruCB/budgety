@@ -29,3 +29,23 @@ en:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
+en:
+  simple_form:
+    placeholders:
+      transaction:
+        notes: Leave some notes...
+        amount: Enter the amount
+        category: Food
+        date: Enter a date
+    labels:
+      transaction:
+        amount: Amount
+        notes: Notes
+        category: Category
+        date: Date
+
+  helpers:
+    submit:
+      transaction:
+        create: Add your transaction
+        update: Update transaction

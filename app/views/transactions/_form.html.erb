@@ -1,9 +1,9 @@
-<%= simple_form_for(@transaction) do |f| %>
-  <li>
-    <ul><%= f.input :amount %></ul>
-    <ul><%= f.association :category %></ul>
-    <ul><%= f.input :notes %></ul>
-    <ul><%= f.input :date, html5: true, as: :date %></ul>
-    <ul><%= f.submit %></ul>
-  </li>
-<% end %>
+<div class="transaction_form">
+  <%= simple_form_for(@transaction) do |f| %>
+      <%= f.input :amount %>
+      <%= f.association :category, collection: Category.order('name ASC') %>
+      <%= f.input :notes %>
+      <%= f.input :date, html5: true, as: :date %>
+      <%= f.submit "Save", class: "transaction_form_button" %>
+  <% end %>
+</div>
