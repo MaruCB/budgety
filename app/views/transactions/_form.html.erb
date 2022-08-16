@@ -1,9 +1,20 @@
 <div class="transaction_form">
   <%= simple_form_for(@transaction) do |f| %>
-      <%= f.input :amount %>
-      <%= f.association :category, collection: Category.order('name ASC') %>
-      <%= f.input :notes %>
-      <%= f.input :date, html5: true, as: :date %>
+      <%= f.input :amount,
+                  wrapper_html: { class: "transaction-item-amount" },
+                  label: false %>
+      <%= f.association :category,
+                  collection: Category.order('name ASC'),
+                  wrapper_html: { class: "transaction-item-category" },
+                  label: false,
+                  include_blank: "-- Select a category --" %>
+      <%= f.input :notes,
+                  wrapper_html: { class: "transaction-item-notes" },
+                  label: false %>
+      <%= f.input :date, html5: true, as: :date,
+                  wrapper_html: { class: "transaction-item-date" },
+                  label: false,
+                  input_html: { placeholder: "Select a date"} %>
       <%= f.submit "Save", class: "transaction_form_button" %>
   <% end %>
 </div>

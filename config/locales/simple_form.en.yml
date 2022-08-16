@@ -34,7 +34,7 @@ en:
     placeholders:
       transaction:
         notes: Leave some notes...
-        amount: Enter the amount
+        amount: £ 0
         category: Food
         date: Enter a date
     labels:
