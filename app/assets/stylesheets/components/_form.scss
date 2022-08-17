@@ -34,15 +34,16 @@
   height: 110px;
 }
 
-.transaction-item-date {
-  input[type="date"]::before{
-    content: attr(placeholder);
-    position: absolute;
-    color: rgba(108, 117, 125, 1);
-    }
+// .transaction-item-date {
+//   input[type="date"]::before{
+//     content: attr(placeholder);
+//     position: absolute;
+//     color: rgba(108, 117, 125, 1);
+//   }
 
-  input[type="date"]{color: rgb(108, 117, 125, 0);}
-}
+//   input[type="date"]{
+//     color: rgb(108, 117, 125, 0);}
+// }
 
 // input[type="date"]{color: rgb(108, 117, 125, 0);}
 

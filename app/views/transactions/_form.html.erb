@@ -1,20 +1,24 @@
-<div class="transaction_form">
+<div class="transaction_form" data-controller="transactions">
   <%= simple_form_for(@transaction) do |f| %>
       <%= f.input :amount,
                   wrapper_html: { class: "transaction-item-amount" },
-                  label: false %>
+                  label: false,
+                  input_html: { data: {transactions_target: "amount"} } %>
       <%= f.association :category,
                   collection: Category.order('name ASC'),
                   wrapper_html: { class: "transaction-item-category" },
                   label: false,
-                  include_blank: "-- Select a category --" %>
+                  include_blank: "-- Select a category --",
+                  input_html: { data: {transactions_target: "category"} }%>
       <%= f.input :notes,
                   wrapper_html: { class: "transaction-item-notes" },
-                  label: false %>
+                  label: false,
+                  input_html: { data: {transactions_target: "notes"} }%>
       <%= f.input :date, html5: true, as: :date,
                   wrapper_html: { class: "transaction-item-date" },
                   label: false,
-                  input_html: { placeholder: "Select a date"} %>
+                  input_html: { placeholder: "Select a date"},
+                  input_html: { data: {transactions_target: "date"} }%>
       <%= f.submit "Save", class: "transaction_form_button" %>
   <% end %>
 </div>
