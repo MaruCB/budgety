@@ -2,6 +2,15 @@ class TransactionsController < ApplicationController
 
   def index
     @transactions = Transaction.all.where(user: current_user)
+    if params.present?
+      case params[:filter]
+        when "Today" then @transactions = Transaction.date_between(Date.today, Date.today)
+        when "3 days" then @transactions = Transaction.date_between(Date.today, Date.today - 3.days)
+        when "30 days" then @transactions = Transaction.date_between(Date.today, Date.today - 30.days)
+      end
+    else
+      @transactions = Transaction.all.where(user: current_user)
+    end
   end
 
   def new

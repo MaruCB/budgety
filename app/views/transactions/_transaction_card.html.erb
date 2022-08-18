@@ -13,11 +13,7 @@
       <div class="transaction_card_amount_green"><%= number_to_currency(transaction.amount, unit: "£", precision: 2, delimiter: "" ) %></div>
     <% end %>
     <div class="text-black-50 transaction_card_date">
-      <% if transaction.date == Date.today %>
-        Today
-      <% else %>
         <%= transaction.date.strftime("%d/%m") %>
-      <% end %>
     </div>
   </div>
 </div>

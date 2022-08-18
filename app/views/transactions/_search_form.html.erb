@@ -1,7 +1,7 @@
 <%= form_with url: root_path, method: :get, class: "d-flex filter-form", data: { controller: "filter", filter_target:"filterForm"} do |f| %>
-  <%= f.select :params,
-              ["Today", "7 days", "30 days"],
+  <%= f.select :filter,
+              ["Today", "3 days", "30 days"],
               { include_blank: "Filter" },
-              { required: true, class: "form-control", data: { filter_target: "selected"} }          
+              { required: true, class: "form-control", data: { filter_target: "selected", action: "change->filter#filterData"} }          
   %>
 <% end %>
