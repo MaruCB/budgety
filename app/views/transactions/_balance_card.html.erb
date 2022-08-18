@@ -1,16 +1,21 @@
 <div class="card rounded border-0 text-center gradient-background text-white">
   <div class="card-body">
     <p class="card-title font-size-small fw-bold">Total Balance</p>
-    <h4 class="p-2">£<%= (current_user.income - current_user.expenses).round(2) %></h4>
+    <h4 class="p-2 fs-2"><%= number_to_currency((current_user.income - current_user.expenses), unit: "£", precision: 2) %></h4>
     <div class="d-inline-flex w-100 justify-content-around">
-      <div>
-        <p class="m-0 fw-light font-size-small">Income</p>
-        <%= image_tag "income", style: "width:25px" %>
-        <p class="font-size-small m-0">£<%= current_user.income %></p>
+      <div class="d-flex-column balance-card-item text-center">
+        <div class="inline-flex text-left">
+          <%= image_tag "income", style: "width:25px" %>
+          <p class="m-0 fw-light font-size-small">Income</p>
+        </div>
+        <p class="font-size-small m-0"><%= number_to_currency(current_user.income, unit: "£", precision: 2) %></p>
       </div>
-      <div>
-        <p class="m-0 fw-light font-size-small">Expenses</p>
-        <p class="font-size-small m-0">£<%= current_user.expenses %></p>
+      <div class="d-flex-column balance-card-item text-center">
+        <div class="inline-flex">
+          <%= image_tag "income", style: "width:25px" %>
+          <p class="m-0 fw-light font-size-small">Expenses</p>
+        </div>
+          <p class="font-size-small m-0"><%= number_to_currency(current_user.expenses, unit: "£", precision: 2) %></p>
       </div>
     </div>
   </div>
