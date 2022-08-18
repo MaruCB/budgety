@@ -7,8 +7,11 @@
 // Layouts
 @import 'layouts/index';
 
-body {
-  font-family: 'DM Sans', sans-serif;
-}
+// Fonts
+@import 'fonts/dm_sans';
+
+* {
+  font-family: "DM Sans Regular";
+ }
 
 

@@ -8,9 +8,9 @@
     </div>
   <div>
     <% if transaction.category.category_type == "expense" %>
-      <div class="transaction_card_amount_red">£<%= transaction.amount %></div>
+      <div class="transaction_card_amount_red"><%= number_to_currency(transaction.amount, unit: "£", precision: 2, delimiter: "" )%></div>
     <% else %>
-      <div class="transaction_card_amount_green">£<%= transaction.amount %></div>
+      <div class="transaction_card_amount_green"><%= number_to_currency(transaction.amount, unit: "£", precision: 2, delimiter: "" ) %></div>
     <% end %>
     <div class="text-black-50 transaction_card_date">
       <% if transaction.date == Date.today %>
