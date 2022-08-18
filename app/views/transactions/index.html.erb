@@ -6,7 +6,7 @@
     <p class="fw-light text-black-50">View all</p>
   </div>
   <div>
-    <div class="transaction_cards">
+    <div class="transaction_cards menu-scroll">
       <% @transactions.all.ordered.each do |transaction| %>
         <%= render "transactions/transaction_card",  transaction: transaction %>
       <% end %>
