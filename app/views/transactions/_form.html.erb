@@ -4,6 +4,7 @@
                   wrapper_html: { class: "transaction-item-amount" },
                   label: false,
                   input_html: { data: {transactions_target: "amount"} } %>
+                  <%= f.object.category %>
       <%= f.association :category,
                   collection: Category.order('name ASC'),
                   wrapper_html: { class: "transaction-item-category" },
