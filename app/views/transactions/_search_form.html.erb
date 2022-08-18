@@ -1,3 +1,15 @@
-<%= form_with url: root_path, method: :get, class: "d-flex" do |f| %>
-  <%= f.select(:difficulty, options_for_select(["Today", "7 days", "30 days"], params[:query]), {},{ class: 'form-control' }) %>
+<%= form_with url: root_path, method: :get, class: "d-flex filter-form", data: { controller: "filter"} do |f| %>
+  <%= f.select :params,
+              ["Today", "7 days", "30 days"],
+              { include_blank: "Filter" },
+              { required: true, class: "form-control" } 
+  %>
 <% end %>
+
+<%# 
+  <%= f.select(:difficulty, options_for_select(
+    ["Today", "7 days", "30 days"],
+    params[:query]),
+    {},
+    { class: 'form-control' }
+    ) %>
