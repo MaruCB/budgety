@@ -1,0 +1,8 @@
+.filter-field {
+  width: 130px;
+  padding-left: 15px;
+  flex-grow: 1;
+  form select{
+    -webkit-appearance: listbox !important
+  }
+}
