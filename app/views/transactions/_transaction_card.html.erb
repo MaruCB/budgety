@@ -1,19 +1,44 @@
-<div class="transaction_card">
-  <div class="d-inline-flex align-items-center">
-    <div class="me-3">
-      <%= image_tag "#{transaction.category.icon_name}", class: "transaction_card_icon" %>
-    </div>
-    <div class="transaction_card_name">
-      <%= transaction.category.name %></div>
-    </div>
-  <div>
-    <% if transaction.category.category_type == "expense" %>
-      <div class="transaction_card_amount_red"><%= number_to_currency(transaction.amount, unit: "£", precision: 2, delimiter: "" )%></div>
-    <% else %>
-      <div class="transaction_card_amount_green"><%= number_to_currency(transaction.amount, unit: "£", precision: 2, delimiter: "" ) %></div>
-    <% end %>
-    <div class="text-black-50 transaction_card_date">
-        <%= transaction.date.strftime("%d/%m") %>
-    </div>
-  </div>
-</div>
+        <div class="swipe-container">
+          <div class="reveal-left">
+            <div class="ms-2">
+              <i class="fas fa-check"></i>
+            </div>
+          </div>
+            <div class="swipe-item">
+              <button type="button">
+                <i class="fas fa-check"></i>
+              </button>
+                <div class='d-flex justify-content-between w-100'>
+                    <div class="d-inline-flex align-items-center">
+                      <div class="me-3">
+                        <%= image_tag "#{transaction.category.icon_name}", class: "transaction_card_icon" %>
+                      </div>
+                      <div class="transaction_card_name">
+                        <%= transaction.category.name %>
+                      </div>
+                    </div>
+                    <div>
+                      <% if transaction.category.category_type == "expense" %>
+                        <div class="transaction_card_amount_red"><%= number_to_currency(transaction.amount, unit: "£", precision: 2, delimiter: "" )%></div>
+                      <% else %>
+                        <div class="transaction_card_amount_green"><%= number_to_currency(transaction.amount, unit: "£", precision: 2, delimiter: "" ) %></div>
+                      <% end %>
+                      <div class="text-black-50 transaction_card_date">
+                          <%= transaction.date.strftime("%d/%m") %>
+                      </div>
+                    </div>
+                </div>
+              <button type="button">
+                <%= link_to root_path do %>
+                  <i class="fas fa-times"></i>
+                <% end %>
+              </button>
+            </div>
+              <%= link_to root_path do %>
+                <div class="reveal-right">
+                  <div class="me-2">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+              <% end %>
+        </div>
