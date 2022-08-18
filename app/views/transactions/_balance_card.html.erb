@@ -1,21 +1,21 @@
 <div class="card rounded border-0 text-center gradient-background text-white">
   <div class="card-body">
     <p class="card-title font-size-small fw-bold">Total Balance</p>
-    <h4 class="p-2 fs-2"><%= number_to_currency((current_user.income - current_user.expenses), unit: "£", precision: 2) %></h4>
+    <h4 class="p-2 fs-2"><%= number_to_currency((current_user.income - current_user.expenses), unit: "£ ", precision: 2, delimiter: " ") %></h4>
     <div class="d-inline-flex w-100 justify-content-around">
       <div class="d-flex-column balance-card-item text-center">
         <div class="inline-flex text-left">
           <%= image_tag "income", style: "width:25px" %>
           <p class="m-0 fw-light font-size-small ps-1">Income</p>
         </div>
-        <p class="font-size-small m-0"><%= number_to_currency(current_user.income, unit: "£", precision: 2) %></p>
+        <p class="font-size-small m-0"><%= number_to_currency(current_user.income, unit: "£ ", precision: 2, delimiter: "") %></p>
       </div>
       <div class="d-flex-column balance-card-item text-center">
         <div class="inline-flex">
           <%= image_tag "expense", style: "width:25px" %>
           <p class="m-0 fw-light font-size-small ps-1">Expenses</p>
         </div>
-          <p class="font-size-small m-0"><%= number_to_currency(current_user.expenses, unit: "£", precision: 2) %></p>
+          <p class="font-size-small m-0"><%= number_to_currency(current_user.expenses, unit: "£ ", precision: 2, delimiter: "") %></p>
       </div>
     </div>
   </div>
