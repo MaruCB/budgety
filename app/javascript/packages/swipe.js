@@ -1,5 +1,4 @@
 import TinyGesture from 'tinygesture';
-// Documentation: https://www.npmjs.com/package/tinygesture
 
 function initSlider(target) {
   let swiped = false;
@@ -10,7 +9,6 @@ function initSlider(target) {
 
   const gesture = new TinyGesture(target);
 
-  // swipe gestures
   gesture.on("panmove", (event) => {
     if (gesture.animationFrame) {
       return;
@@ -59,7 +57,6 @@ function initSlider(target) {
 
   // reset on tap
   gesture.on("doubletap", (event) => {
-    // we could also use 'doubletap' here
     window.requestAnimationFrame(() => {
       target.style.transition = "transform .2s ease-in";
       swiped = false;
