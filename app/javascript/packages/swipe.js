@@ -15,7 +15,7 @@ function initSlider(target) {
     if (gesture.animationFrame) {
       return;
     }
-    event.preventDefault();
+    // event.preventDefault();
     gesture.animationFrame = window.requestAnimationFrame(() => {
       let getX = (x) => {
         if (x < revealWidth && x > -revealWidth) {

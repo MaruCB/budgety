@@ -30,9 +30,12 @@ class TransactionsController < ApplicationController
     end
   end
 
-  # def edit
-  #   @Transaction = Transaction.find(params[:id])
-  # end
+  def destroy
+    @transaction = Transaction.find(params[:id])
+    @transaction.destroy
+    # No need for app/views/restaurants/destroy.html.erb
+    redirect_to root_path, status: :see_other
+  end
 end
 
 private
