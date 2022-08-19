@@ -3,7 +3,7 @@
   <br>
   <div class="d-flex justify-content-between mb-3">
     <div class="d-inline-flex">
-      <div class="m-0 align-self-center">Transactions (<%= Transaction.all.count %>)</div>
+      <div class="m-0 align-self-center">Transactions (<%= @transactions.count %>)</div>
       <div class="filter-field">
         <%= render "transactions/search_form" %>
       </div>
