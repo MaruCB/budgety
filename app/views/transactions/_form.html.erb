@@ -1,5 +1,5 @@
 <div class="transaction_form" data-controller="transactions">
-  <%= simple_form_for(@transaction) do |f| %>
+  <%= simple_form_for(@transaction, html: { data: { turbo_frame: "_top" }} ) do |f| %>
       <%= f.input :amount,
                   wrapper_html: { class: "transaction-item-amount" },
                   label: false,

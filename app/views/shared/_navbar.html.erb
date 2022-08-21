@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid justify-con">
     <div class="d-flex">
-      <%= link_to root_path do %>
+      <%= link_to root_path, data: { turbo_frame: "_top" } do %>
         <%= image_tag "user", class: "navbar-avatar-round" %>
       <% end %>
       <div class="ps-3">
@@ -17,7 +17,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <%= link_to "Home", root_path,
+                  class: "nav-link active",
+                  data: { turbo_frame: "_top" } %>
         <a class="nav-link" href="#">Stats</a>
       </div>
     </div>
