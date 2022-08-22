@@ -8,7 +8,7 @@
         <%= render "transactions/search_form" %>
       </div>
     </div>
-    <p class="align-self m-0 align-self-center "><%= link_to "View all", root_path, class: "text-decoration-none fw-light contrast-small" %></p>
+    <p class="align-self m-0 align-self-center "><%= link_to "View all", root_path, data: { turbo_frame: "_top" }, class: "text-decoration-none fw-light contrast-small" %></p>
   </div>
   <div>
     <div class="transaction_cards menu-scroll">
